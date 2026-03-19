@@ -1,1 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Axiom Team | Axiom Asia Private Capital</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="test.css" />
+</head>
+<body>
 
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <a class="navbar-logo" href="#">
+      <img src="C:\Users\BraydenTan\OneDrive - Axiom Asia Private Capital Pte. Ltd\Desktop\test proj\images\Logo.png" alt="Axiom Asia Private Capital" />
+    </a>
+    <div class="navbar-right">
+      <ul class="navbar-links">
+        <li><a href="#">About</a></li>
+        <li><a href="#" class="active">Team</a></li>
+        <li>
+          <span class="navbar-lang">
+            English
+            <svg width="10" height="6" viewBox="0 0 10 6" fill="none">
+              <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </span>
+        </li>
+      </ul>
+      <a class="navbar-login" href="#">Investor Login</a>
+    </div>
+  </header>
+
+  <!-- HERO: navy left / team photo right -->
+  <section class="hero">
+    <div class="hero-left">
+      <div class="hero-text">
+        <h1 class="hero-title">Our Team</h1>
+        <p class="hero-desc">
+          We have one of the largest local teams<br />
+          on the ground in Asia covering private<br />
+          equity.
+        </p>
+      </div>
+    </div>
+    <div class="hero-right">
+      <!--
+        Replace src with your own team photo, e.g. src="images/team-photo.jpg"
+      -->
+      <img
+        src="C:\Users\BraydenTan\OneDrive - Axiom Asia Private Capital Pte. Ltd\Desktop\test proj\images\team-image.png"
+        alt="The Axiom Asia team outside Capital Tower, Singapore"
+
+      />
+    </div>
+  </section>
+
+  <!-- DEPT TABS -->
+  <!-- DEPT TABS -->
+    <div class="dept-tabs-wrap">
+    <button class="dept-tab active" data-dept="all">
+        All
+    </button>
+    <button class="dept-tab" data-dept="investment">
+        Investment &amp; Investor Partnership Services
+    </button>
+    <button class="dept-tab" data-dept="finance">
+        Finance &amp; Admin
+    </button>
+    <button class="dept-tab" data-dept="axiommind">
+        Axiom Mind &amp; Affiliates
+    </button>
+    </div>
+
+  <!-- CONTROLS BAR -->
+  <div class="controls-bar">
+    <div class="search-wrap">
+      <svg class="search-icon" viewBox="0 0 24 24">
+        <circle cx="11" cy="11" r="7.5" />
+        <line x1="21" y1="21" x2="16.5" y2="16.5" />
+      </svg>
+      <input
+        class="search-input"
+        id="search"
+        type="text"
+        placeholder="Search by name or role…"
+        oninput="filterCards()"
+        autocomplete="off"
+      />
+    </div>
+    <div class="filter-pills">
+      <button class="pill active" data-filter="all"              onclick="setFilter('all', this)">All</button>
+      <button class="pill"        data-filter="Managing Partner" onclick="setFilter('Managing Partner', this)">Managing Partner</button>
+      <button class="pill"        data-filter="Partner"          onclick="setFilter('Partner', this)">Partner</button>
+      <button class="pill"        data-filter="Director"         onclick="setFilter('Director', this)">Director</button>
+      <button class="pill"        data-filter="Associate"        onclick="setFilter('Associate', this)">Associate</button>
+    </div>
+    <span class="member-count" id="memberCount">12 people</span>
+  </div>
+
+  <!-- TEAM GRID -->
+  <main>
+    <div class="team-grid" id="teamGrid"></div>
+    <div class="empty-state" id="emptyState">
+      <strong>No results found</strong>
+      Try adjusting your search or filter
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <span class="footer-copy">© 2026 Axiom Asia. All Rights Reserved.</span>
+    <ul class="footer-links">
+      <li><a href="#">Privacy Statement</a></li>
+      <li><a href="#">Terms of Use</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+  </footer>
+
+  <script src="test.js"></script>
+</body>
+</html>
